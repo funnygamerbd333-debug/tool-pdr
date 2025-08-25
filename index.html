@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro PDF/Word/JPG Tool | API-Free</title>
+<meta name="description" content="Convert PDF, Word, JPG online in browser. Merge, Split, Compress PDFs. Free & API-Free. Mobile-Friendly & Professional.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Pro All-in-One PDF/Word/JPG Tool</h1>
+  <p class="desc">Convert PDF, Word, JPG files directly in browser. Merge, Split, Compress PDFs easily. 100% Free & API-Free.</p>
+
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event,'pdfWord')">PDF → Word</button>
+    <button class="tablinks" onclick="openTab(event,'wordPdf')">Word → PDF</button>
+    <button class="tablinks" onclick="openTab(event,'pdfJpg')">PDF → JPG</button>
+    <button class="tablinks" onclick="openTab(event,'jpgPdf')">JPG → PDF</button>
+    <button class="tablinks" onclick="openTab(event,'mergeSplit')">Merge / Split</button>
+    <button class="tablinks" onclick="openTab(event,'compressPdf')">Compress PDF</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div id="pdfWord" class="tabcontent" style="display:block;">
+    <div class="card">
+      <h2>PDF → Word Converter</h2>
+      <input type="file" id="pdfToWordFile" accept=".pdf">
+      <button class="convert-btn" onclick="pdfToWord()">Convert PDF to Word</button>
+      <div id="pdfWordStatus" class="status"></div>
+    </div>
+  </div>
+
+  <div id="wordPdf" class="tabcontent">
+    <div class="card">
+      <h2>Word → PDF Converter</h2>
+      <input type="file" id="wordToPdfFile" accept=".doc,.docx">
+      <button class="convert-btn" onclick="wordToPdf()">Convert Word to PDF</button>
+      <div id="wordPdfStatus" class="status"></div>
+    </div>
+  </div>
+
+  <div id="pdfJpg" class="tabcontent">
+    <div class="card">
+      <h2>PDF → JPG Converter</h2>
+      <input type="file" id="pdfToJpgFile" accept=".pdf">
+      <button class="convert-btn" onclick="pdfToJpg()">Convert PDF to JPG</button>
+      <div id="pdfJpgStatus" class="status"></div>
+    </div>
+  </div>
+
+  <div id="jpgPdf" class="tabcontent">
+    <div class="card">
+      <h2>JPG → PDF Converter</h2>
+      <input type="file" id="jpgToPdfFile" accept="image/*" multiple>
+      <button class="convert-btn" onclick="jpgToPdf()">Convert JPG to PDF</button>
+      <div id="jpgPdfStatus" class="status"></div>
+    </div>
+  </div>
+
+  <div id="mergeSplit" class="tabcontent">
+    <div class="card">
+      <h2>Merge / Split PDF</h2>
+      <input type="file" id="mergeSplitFile" accept=".pdf" multiple>
+      <button class="convert-btn" onclick="mergeSplitPdf()">Merge PDFs</button>
+      <button class="convert-btn" onclick="splitPdf()">Split PDF</button>
+      <div id="mergeSplitStatus" class="status"></div>
+    </div>
+  </div>
+
+  <div id="compressPdf" class="tabcontent">
+    <div class="card">
+      <h2>Compress PDF</h2>
+      <input type="file" id="compressPdfFile" accept=".pdf">
+      <button class="convert-btn" onclick="compressPdf()">Compress PDF</button>
+      <div id="compressStatus" class="status"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.7.0/docx.browser.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
